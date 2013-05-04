@@ -27,9 +27,13 @@
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 	
 	<script type="text/javascript">
-	$('#fadeInLeft').addClass('animated fadeInLeft');
-	
-	</script>
+
+        $(window).load(function() {
+           	$("#three").delay(600).fadeInRight();
+           	$("#four").delay(700).fadeInLeft();
+			$("body").delay(500).queue(function(next){$(this).addClass("loaded");next();})
+       	})
+   </script>
 	
 	<!--Delete embedded styles, just for example.-->
 	<style type="text/css">
